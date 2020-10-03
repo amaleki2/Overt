@@ -587,7 +587,6 @@ Tests
 """
 
 function evaluate(oAP_test::OverApproximationParser, var_dict::Dict)
-    println("Evaluate")
     """
     Given a OverApproximationParser object and a dictionary of input variables
     this function evaluate all other variables that are introduced. And the
