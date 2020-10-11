@@ -1,11 +1,10 @@
 # Overt
 
 [![Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://sisl.github.io/Overt.jl/stable)
-<!-- [![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://sisl.github.io/Overt.jl/dev) -->
 [![Build Status](https://travis-ci.com/sisl/Overt.jl.svg?branch=master)](https://travis-ci.com/sisl/Overt.jl)
-<!-- [![Build Status](https://ci.appveyor.com/api/projects/status/github/sisl/Overt.jl?svg=true)](https://ci.appveyor.com/project/sisl/Overt-jl) -->
 [![Coverage](https://codecov.io/gh/sisl/Overt.jl/branch/master/graph/badge.svg)](https://codecov.io/gh/sisl/Overt.jl)
-
+<!-- [![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://sisl.github.io/Overt.jl/dev) -->
+<!-- [![Build Status](https://ci.appveyor.com/api/projects/status/github/sisl/Overt.jl?svg=true)](https://ci.appveyor.com/project/sisl/Overt-jl) -->
 
 This repo contains a julia implementation for the Overt algorithm, as part of [1]. Overt provides a relational piecewise linear over-approximation of any multi-dimensional functions. The over-approximation is useful for verifying systems with non-linear dynamics. In particular, we used Overt for verifying non-linear dynamical systems that are controlled by neural networks. Check out OvertVerify package [2] for more details
 
