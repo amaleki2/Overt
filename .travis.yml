@@ -9,7 +9,7 @@ julia:
 os:
   - linux
   - osx
-  - windows
+  #- windows https://github.com/JuliaIO/FFMPEG.jl/issues/30#issuecomment-706531526
 arch:
   - x64
 cache:
