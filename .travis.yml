@@ -27,7 +27,7 @@ jobs:
           using Pkg
           Pkg.develop(PackageSpec(path=pwd()))
           Pkg.instantiate()
-          using Documenter: doctest
+          #using Documenter: doctest
           using Overt
           #doctest(Overt)
           #include("docs/make.jl")'
