@@ -1,6 +1,6 @@
 # Overt
 
-[![Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://sisl.github.io/Overt.jl/stable)
+<!-- [![Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://sisl.github.io/Overt.jl/stable) -->
 [![Build Status](https://travis-ci.com/sisl/Overt.jl.svg?branch=master)](https://travis-ci.com/sisl/Overt.jl)
 [![Coverage](https://codecov.io/gh/sisl/Overt.jl/branch/master/graph/badge.svg)](https://codecov.io/gh/sisl/Overt.jl)
 <!-- [![Dev](https://img.shields.io/badge/docs-dev-blue.svg)](https://sisl.github.io/Overt.jl/dev) -->
