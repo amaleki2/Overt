@@ -30,7 +30,7 @@ add https://github.com/sisl/Overt.jl
 
 
 ## Usage
-```
+```julia
 using Overt
 
 func = :(sin(x + y) * exp(z))
@@ -39,7 +39,7 @@ o1 = overapprox_nd(func, range_dict)
 
 ```
 The output is
-```
+```julia
 output = v_24
 v_1 == x + y
 v_2 == 0.01 * max(0, -1.006 (v_1 - 0.994)) + 1.004 max(0, min(1.006 (v_1 - 0.0), -0.883 (v_1 - 2.126))) + 1.015 max(0, min(0.883 (v_1 - 0.994), -1.144 (v_1 - 3.0))) + 0.151max(0, 1.145 (v_1 - 2.126))
@@ -72,7 +72,7 @@ v_15 ≦ v_13
 v_18 ≦ v_19
 v_19 ≦ v_17
 ```
----
+
 ## Reference
 
 - [1] "*Safety Verification of Neural Network Policies for Nonlinear Systems*", Sidrane et al. (2020) [link](some link)
