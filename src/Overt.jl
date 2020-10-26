@@ -1,5 +1,7 @@
 module Overt
 
+include("overt_utils.jl")
+include("overt_1d.jl")
 include("overt_nd.jl")
 include("overt_parser.jl")
 

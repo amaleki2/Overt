@@ -1,6 +1,3 @@
-include("overt_utils.jl")
-include("overt_1d.jl")
-
 plotflag = false
 function change_plotflag!()
     global plotflag

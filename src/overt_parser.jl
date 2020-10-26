@@ -1,4 +1,3 @@
-include("overt_utils.jl")
 
 """
 Note:
@@ -268,9 +267,6 @@ low level functions: max constraints
 ----------------------------------------------
 """
 
-""" find if this expr constains max """
-is_max_expr(expr::Union{Symbol, Expr}) = :max in get_symbols(expr)
-
 """ count number of maximums in the expression """
 function number_of_max(expr::Union{Expr, Symbol})
    n_max = 0
@@ -398,7 +394,7 @@ function parse_single_min_expr(expr::Expr, bound_parser::OverApproximationParser
         xl, xu = bound_parser.ranges[x]
         bound_parser.ranges[x2] = [-xu, -xl]
     else
-        e = simplify(:(-1*$x))
+        e = simplify_expr(:(-1*$x))
         new_expr = :($x2 == $(e))
         parse_eq(new_expr, bound_parser)
         bound_parser.ranges[x2] = find_range(e, bound_parser.ranges)
@@ -411,7 +407,7 @@ function parse_single_min_expr(expr::Expr, bound_parser::OverApproximationParser
         yl, yu = bound_parser.ranges[y]
         bound_parser.ranges[y2] = (-yu, -yl)
     else
-        e = simplify(:(-1*$y))
+        e = simplify_expr(:(-1*$y))
         new_expr = :($y2 == $(e))
         parse_eq(new_expr, bound_parser)
         bound_parser.ranges[y2] = find_range(e, bound_parser.ranges)
@@ -663,7 +659,7 @@ function test_random_input(expr::Expr, oAP_test::OverApproximationParser)
     for (k, v) in zip(vars, values)
         substitute!(expr_eval, k, v)
     end
-    expr_eval_rite = simplify(expr_eval.args[3]) # evaluate expression directly
+    expr_eval_rite = simplify_expr(expr_eval.args[3]) # evaluate expression directly
 
     dict_var = Dict(zip(vars, values))
     while expr.args[2] ∉ keys(dict_var)

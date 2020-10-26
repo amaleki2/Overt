@@ -404,7 +404,7 @@ function multiply_interval(range, constant)
     return [min(S...), max(S...)]
 end
 
-simplify(ex::Expr) = postwalk(e -> _simplify(e), ex)
+simplify_expr(ex::Expr) = postwalk(e -> _simplify(e), ex)
 _simplify(s) = s
 _simplify(e::Expr) = Meta.parse(string(expand(Basic(e))))
 
